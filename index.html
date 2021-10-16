@@ -1,0 +1,55 @@
+<script>
+
+// TIP 1: Generate Random Hex
+// You can generate random hex colors with Math.random and padEnd properties.
+
+// const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
+// console.log(randomHex());
+// Result: #92b008
+
+
+// TIP 2: Remove Duplicated from Array
+// You can easily remove duplicates with Set in JavaScript. Its a life saver.
+
+// const removeDuplicates = (arr) => [...new Set(arr)];
+// console.log(removeDuplicates([1, 2, 3, 3, 4, 4, 5, 5, 6,7,7,7]));
+// Result: [ 1, 2, 3, 4, 5, 6 ]
+
+
+// TIP 3: Get Query Params from URL
+// You can easily retrieve query params from a url either by passing window.location or the raw URL goole.com?search=easy&page=3
+
+// const getParameters = (URL) => {
+//   URL = JSON.parse('{"' + decodeURI(URL.split("?")[1]).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') +'"}');
+//   return JSON.stringify(URL);
+// };
+
+// getParameters(window.location)
+
+// Result: { search : "easy", page : 3 }
+
+
+
+// TIP 4: Log Time from Date
+
+//We can log time, in the format hour::minutes::seconds from a given date.
+// const timeFromDate = date => date.toTimeString().slice(0, 8);
+// console.log(timeFromDate(new Date(2021, 0, 10, 17, 30, 0))); 
+
+// Result: "17:30:00"
+
+// TIP 5: Check if a number is even or odd
+
+// const isEven = num => num % 2 === 0;
+// console.log(isEven(20001)); 
+// Result: True
+
+
+// TIP 6: Find Average of Numbers
+// Find the average between multiple numbers using reduce method.
+const average = (...args) => args.reduce((a, b) => a + b) / args.length;
+console.log(average(1, 2, 3, 4,6));
+// Result: 2.5
+
+
+</script>
